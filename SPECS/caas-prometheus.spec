@@ -18,6 +18,7 @@
 %define RPM_MINOR_VERSION 0
 %define GO_VERSION 1.12.1
 %define IMAGE_TAG %{RPM_MAJOR_VERSION}-%{RPM_MINOR_VERSION}
+%define CPU_ARCHITECTURE aarch64
 
 Name:           %{RPM_NAME}
 Version:        %{RPM_MAJOR_VERSION}
@@ -25,7 +26,7 @@ Release:        %{RPM_MINOR_VERSION}%{?dist}
 Summary:        Containers as a Service Prometheus component
 License:        %{_platform_license} and BSD and Apache License and MIT license and Mozilla Public License and Lesser General Public License and GNU General Public License v2.0 only
 URL:            https://github.com/prometheus/prometheus
-BuildArch:      x86_64
+BuildArch:      %{CPU_ARCHITECTURE}
 Vendor:         %{_platform_vendor} and prometheus/prometheus unmodified
 Source0:        %{name}-%{version}.tar.gz
 
